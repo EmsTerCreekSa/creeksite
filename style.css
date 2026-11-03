@@ -1,0 +1,207 @@
+:root {
+    --creekcolor: #e30044;
+}
+
+html {
+    background-color: #000;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(black, #e3004434);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    display: block;
+
+    padding-bottom: 50px;
+
+    box-sizing: border-box;
+    background: #000;
+
+    z-index: 100;
+}
+
+.page-select {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+
+    display: flex;
+    gap: 0;
+
+    background: #000;
+}
+
+.page-select a {
+    display: block;
+    padding: 10px 16px;
+
+    color: white;
+    background: transparent;
+    text-decoration: none;
+    text-align: center;
+
+    border-right: 1px solid #ffffff40;
+
+    transition: all 0.15s ease;
+}
+
+.page-select a:last-child {
+    border-right: none;
+}
+
+.page-select a:hover {
+    color: var(--creekcolor);
+}
+
+footer {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+
+    color: var(--creekcolor);
+}
+
+main {
+    margin-top: 60px;
+}
+
+/* main page */
+
+.box-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.splash-box {
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    text-align: center;
+
+    background-color: #00000088;
+
+    padding: 15px;
+}
+
+.album-box {
+    all: unset;
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.album-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* links page */
+
+.links {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 24px;
+}
+
+.links a {
+    color: var(--creekcolor);
+    text-decoration: none;
+}
+
+.links a:hover {
+    font-weight: bold;
+    color: white;
+}
+
+/* lyrics page */
+
+.lyrics-page:after {
+    box-sizing: border-box;
+    display:table;
+    clear:both;
+    width:100%;
+}
+
+.songs-list {
+    float: left;
+    width: 50vw;;
+    height: 90vh;
+
+    overflow: auto;
+
+    box-sizing: border-box;
+    border: 1px solid #ffffff40;
+    padding: 15px;
+}
+
+.songs-list summary {
+    cursor: pointer;
+}
+
+.songs-list button {
+    all: unset;
+    cursor: pointer;
+}
+
+.songs-list button.selected {
+    all: unset;
+    cursor: pointer;
+    background-color: #ffffff40;
+    font-weight: bold;
+}
+
+.lyrics-display {
+    float: right;
+    width: 47vw;
+    height: 90vh;
+    border: 1px solid #ffffff40;
+
+    overflow: auto;
+
+    white-space: pre-wrap;
+    box-sizing: border-box;
+    padding: 15px;
+}
